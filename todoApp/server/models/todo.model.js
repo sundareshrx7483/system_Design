@@ -20,4 +20,7 @@ const todoSchema= new mongoose.Schema({
     timestamps:true
 });
 
+todoSchema.index({completed:1});
+
+
 export const Todo=mongoose.model("Todo",todoSchema);
